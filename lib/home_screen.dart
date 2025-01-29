@@ -56,7 +56,7 @@ class _home_screenState extends State<home_screen> {
               ),
             ),
             SizedBox(
-              width: 60,
+              width: 65,
               child: TextFormField(
                 keyboardType: TextInputType.number,
                 controller: _glsCountController,
