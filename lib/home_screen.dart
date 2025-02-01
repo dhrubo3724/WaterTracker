@@ -83,7 +83,7 @@ class _home_screenState extends State<home_screen> {
           child: Icon(
             Icons.water_drop_outlined,
             color: Colors.cyan,
-            size: 70,
+            size: 60,
           ),
         ),
       ),
