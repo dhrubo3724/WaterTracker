@@ -26,7 +26,7 @@ class _home_screenState extends State<home_screen> {
               height: 10,
             ),
             Text(
-              "Total Water Count is : ${_totalWaterCount()} ",
+              "Total Water Count is : ${_totalWaterCount()}",
               style: TextStyle(fontSize: 24),
             ),
             SizedBox(
@@ -39,24 +39,9 @@ class _home_screenState extends State<home_screen> {
             SizedBox(
               height: 12,
             ),
-            GestureDetector(
-              onTap: _addwater,
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(59),
-                    border: Border.all(color: Colors.cyan, width: 8)),
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Icon(
-                    Icons.water_drop_outlined,
-                    color: Colors.cyan,
-                    size: 70,
-                  ),
-                ),
-              ),
-            ),
+            buildGestureDetector,
             SizedBox(
-              width: 65,
+              width: 60,
               child: TextFormField(
                 keyboardType: TextInputType.number,
                 controller: _glsCountController,
@@ -81,6 +66,25 @@ class _home_screenState extends State<home_screen> {
                   }),
             )
           ],
+        ),
+      ),
+    );
+  }
+
+  GestureDetector get buildGestureDetector {
+    return GestureDetector(
+      onTap: _addwater,
+      child: Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(59),
+            border: Border.all(color: Colors.cyan, width: 8)),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Icon(
+            Icons.water_drop_outlined,
+            color: Colors.cyan,
+            size: 70,
+          ),
         ),
       ),
     );
